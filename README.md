@@ -8,8 +8,9 @@ list_opportunities.txt
 
 ## Requirements
 
-Install Python  
-Download from:
+### 1. Install Python (Skip if already installed)
+
+Download Python from:
 
 https://www.python.org/downloads/
 
@@ -17,12 +18,36 @@ During installation:
 
 Enable **Add Python to PATH**
 
+To check if Python is already installed, open Command Prompt and run:
 
-Install required packages:
+```
+python --version
+```
+
+If a version number appears, Python is already installed and you can skip installation.
+
+
+### 2. Install Required Dependencies
+
+Open Command Prompt and run:
 
 ```
 pip install selenium webdriver-manager
 ```
+
+This installs:
+
+- selenium (controls the browser)  
+- webdriver-manager (automatically installs Chrome driver)
+
+
+### 3. Use Google Chrome
+
+This script uses **Google Chrome** as the browser.
+
+Make sure Chrome is installed:
+
+https://www.google.com/chrome/
 
 
 ## Files Needed
@@ -60,8 +85,23 @@ Change the number after:
 home_mcs=
 ```
 
-This number is the country code. (Check your aiesec.org url after filtering for your specific country)
+This number is the country code.
 
+To get the correct number:
+
+1. Go to aiesec.org  
+2. Filter by your country  
+3. Look at the URL  
+4. Copy the number after:
+
+```
+home_mcs=
+```
+
+Example:
+
+```
+home_mcs=102
 ```
 
 After changing the number:
@@ -91,9 +131,15 @@ Run:
 ```
 python aiesec-web-scraper.py
 ```
-(LEAVE THE SCRIPT RUNNING, DO NOT RESIZE THE WINDOW THAT POPS UP)
 
-estimated waiting time around 1 min / 5 opps
+Leave the browser window open.  
+Do not resize or close it while the script is running.
+
+Estimated waiting time:
+
+Around **1 minute per 5 opportunities**.
+
+
 
 ## What the Script Does
 
